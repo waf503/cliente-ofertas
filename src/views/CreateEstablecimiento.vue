@@ -51,7 +51,7 @@ export default {
               nombre: this.establecimientoArreglo.nombre,
               activo: true
           } 
-        await axios.post(`http://localhost:3000/api/establecimiento`, data)
+        axios.post(`http://localhost:3000/api/establecimiento`, data)
             .then((res)=>{
                 this.establecimientoRespon = res.data.userId
                 
@@ -61,7 +61,7 @@ export default {
                 this.var++                
             }) 
             
-             //(this._createEstablecimientoCategoria(this.var,id,this.establecimientoRespon.id))
+             (this._createEstablecimientoCategoria(this.var,id,this.establecimientoRespon.id))
 
             //alert(`id: ${this.var}, idCategoria: ${id}, idEstablecimiento: ${this.idEstablecimiento}`)
         },
